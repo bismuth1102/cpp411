@@ -1,0 +1,22 @@
+apt-get install libcpprest-dev
+libcpprest
+-lboost_system -lcrypto -lssl -lcpprest
+
+apt-get install libjsoncpp-dev
+JsonCpp
+-ljsoncpp
+
+g++ -std=c++11 -o write write.cpp -lcrypto -lssl -lboost_system -lboost_thread -lboost_regex -lboost_serialization -lpthread -ltwitcurl
+
+mongodb
+$(pkg-config --cflags --libs libmongocxx)
+
+apt-get install libv8-dev
+
+=====================
+
+g++ -std=c++11 -o cc cc.cpp -lcrypto -lssl -lboost_system -lboost_thread -lboost_regex -lboost_serialization -lpthread -ltwitcurl -ljsoncpp
+
+g++ -std=c++11 -o cs cs.cpp -lcrypto -lssl -lboost_system -lboost_thread -lboost_regex -lboost_serialization -lpthread $(pkg-config --cflags --libs libmongocxx)
+
+g++ -std=c++11 -o ss ss.cpp -lboost_system -lcrypto -lssl -lcpprest $(pkg-config --cflags --libs libmongocxx) -ljsoncpp

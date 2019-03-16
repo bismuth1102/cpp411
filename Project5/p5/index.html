@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>CSE 411 - Project 5 - Jiacheng</title>
+    <script src="connect.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <h1>Twitter Trend Visualizer</h1>
+    <input type="text" id="query" />
+    <button id="search">Search</button>
+    <div id="chart" style="margin-top: 5px; width:200px; height:200px;">Chart Area</div>
+</body>
+<script>
+    // Note to students: you should make something much more beautiful and
+    // functional than this... it's just a starting point
+    var search = $("#search");
+    var query = $("#query");
+    var chart = $("#chart");
+
+    search.click(function () {
+        var s = "http://localhost:34568/test/get?"+query.val();
+        alert(s);
+        // $.ajax({url:"http://localhost:34568/test/get?"+query.val()});
+        // jQuery.ajax({
+        //     url: "http://localhost:34568/test/get?"+query.val(),
+        //     type: 'get',
+        //     success: function (data) {
+        //         alert("success");
+        //     }
+        // });
+    });
+</script>
+
+</html>
