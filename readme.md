@@ -1,4 +1,4 @@
-##c++ programs for cse411 in lehigh
+## c++ programs for cse411 in lehigh
 
 p1: TBB parallel, `parallel_for` and `parallel_reduce`.
 
